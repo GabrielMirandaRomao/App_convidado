@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tv_guest_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Convidade"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_edit"/>
+
+    <ImageView
+        android:id="@+id/bt_edit"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:clickable="true"
+        android:src="@drawable/ic_edit"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_guest_name"
+        app:layout_constraintTop_toTopOf="@id/tv_guest_name"
+        app:layout_constraintEnd_toStartOf="@id/bt_delete" />
+
+    <ImageView
+        android:id="@+id/bt_delete"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_delete"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toTopOf="@id/bt_edit"
+        app:layout_constraintBottom_toBottomOf="@id/bt_edit"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

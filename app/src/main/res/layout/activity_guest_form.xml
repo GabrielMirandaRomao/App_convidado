@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.guestForm.GuestFormActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_present"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/present_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_user_name" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_present">
+
+        <RadioButton
+            android:id="@+id/ra_button_present"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/present" />
+
+        <RadioButton
+            android:id="@+id/ra_button_absent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/absent" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+
+        app:layout_constraintBottom_toBottomOf="@id/bt_update"
+        app:layout_constraintEnd_toStartOf="@id/bt_update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
+
+    <Button
+        android:id="@+id/bt_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar"
+        app:layout_constraintBottom_toBottomOf="@id/bt_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_save"
+        app:layout_constraintTop_toTopOf="@id/bt_save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
